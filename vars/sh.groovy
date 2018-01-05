@@ -8,15 +8,14 @@ def call(Map params = [:]) {
     Boolean returnStdout = params.get('returnStdout', false)
     String encoding = params.get('encoding', null)
 
-    timeout(time: 2, unit: HOURS) {
-        timestamps {
-            /* invoke the built-in sh step */
-            return steps.sh(script: script,
-                    returnStatus: returnStatus,
-                    returnStdout: returnStdout,
-                    encoding: encoding)
-        }
+    println 'Override with timeout'
+    timeout(5) {
+        return steps.sh(script: script,
+                returnStatus: returnStatus,
+                returnStdout: returnStdout,
+                encoding: encoding)
     }
+
 }
 
 /* Convenience overload */
