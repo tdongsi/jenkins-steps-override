@@ -8,7 +8,6 @@ def call(Map params = [:]) {
     Boolean returnStdout = params.get('returnStdout', false)
     String encoding = params.get('encoding', null)
 
-    println 'Override with timeout'
     timeout(5) {
         return steps.sh(script: script,
                 returnStatus: returnStatus,
