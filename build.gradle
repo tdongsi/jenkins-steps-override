@@ -12,13 +12,25 @@ idea {
     }
 }
 
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['vars', 'src']
+        }
+    }
+
+    test {
+        groovy {
+            srcDirs = ['test/groovy']
+        }
+    }
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
     maven { url 'http://repo.jenkins-ci.org/releases/'}
-    maven { url 'http://updates.jenkins-ci.org/download/plugins/'}
-    maven { url 'http://jenkins-updates.cloudbees.com/download/plugins/'}
     mavenCentral()
 }
 
