@@ -12,8 +12,8 @@ import static org.junit.Assert.assertEquals
 class MavenUtilsTest {
   public final static List<String> ARGS_COMMON = Collections.unmodifiableList(Arrays.asList(
       'hbase.phoenix.client.test',
-      'hbase.phoenix.schema',
       'hbase.phoenix.client.version',
+      'hbase.phoenix.schema',
   ))
 
   @Test
@@ -83,8 +83,8 @@ class MavenUtilsTest {
     assertEquals(
         MavenUtils.getVersionArgString(input, ARGS_COMMON),
         ['hbase.phoenix.client.test',
-         'hbase.phoenix.schema',
-         'hbase.phoenix.client.version']
+         'hbase.phoenix.client.version',
+         'hbase.phoenix.schema']
     )
 
   }

@@ -27,7 +27,7 @@ class MavenUtils {
    * @param args: List of property names
    * @return List of strings
    */
-  static String getVersionArgString(@Nonnull Model pom, @Nonnull args) {
+  static def getVersionArgString(@Nonnull Model pom, @Nonnull args) {
 
     def props = pom.properties
     def params = []
