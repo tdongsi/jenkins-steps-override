@@ -1,0 +1,8 @@
+   demo.run()
+      demo.node(groovy.lang.Closure)
+         demo.stage(Checkout, groovy.lang.Closure)
+            demo.checkout({})
+            demo.sh(git clean -xdf)
+         demo.stage(Build and test, groovy.lang.Closure)
+            demo.sh(./gradlew build)
+            demo.junit(build/test-results/test/*.xml)
