@@ -6,32 +6,32 @@ apply plugin: 'java'
 apply plugin: 'idea'
 
 idea {
-    module {
-        downloadJavadoc = true
-        downloadSources = true
-    }
+  module {
+    downloadJavadoc = true
+    downloadSources = true
+  }
 }
 
 sourceSets {
-    main {
-        groovy {
-            srcDirs = ['vars', 'src']
-        }
+  main {
+    groovy {
+      srcDirs = ['vars', 'src']
     }
+  }
 
-    test {
-        groovy {
-            srcDirs = ['test']
-        }
+  test {
+    groovy {
+      srcDirs = ['test']
     }
+  }
 }
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-    maven { url 'http://repo.jenkins-ci.org/releases/'}
-    mavenCentral()
+  maven { url 'http://repo.jenkins-ci.org/releases/' }
+  mavenCentral()
 }
 
 dependencies {
@@ -41,9 +41,8 @@ dependencies {
 
   // Jenkins plugins
   compile group: 'org.jenkins-ci.plugins', name: 'credentials', version: '2.1.13', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins', name: 'matrix-auth', version: '1.6', ext: 'jar'
-  compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-cps', version: '2.39', ext: 'jar'
-  compile group: 'org.apache.maven', name: 'maven-model', version: '3.3.9', ext: 'jar'
+  compile group: 'org.jenkins-ci.plugins', name: 'credentials-binding', version: '1.13', ext: 'jar'
+  compile group: 'org.apache.maven', name: 'maven-model', version: '3.3.9'
 
   testCompile group: 'com.lesfurets', name: 'jenkins-pipeline-unit', version: '1.1'
   testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
