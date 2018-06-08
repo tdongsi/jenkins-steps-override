@@ -28,6 +28,8 @@ class JenkinsfileTest extends BaseRegressionTest {
     ])
     */
     binding.setVariable('scm', [:])
+
+    helper.registerAllowedMethod('library', [String.class], null)
   }
 
   @Test

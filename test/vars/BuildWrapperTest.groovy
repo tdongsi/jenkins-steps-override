@@ -36,7 +36,7 @@ class BuildWrapperTest extends BaseRegressionTest {
   public void configured() throws Exception {
     /*
     Represent the call:
-    buildWrapperDemo {
+    buildWrapper {
       settings = "dummy.xml"
     }
     */
@@ -51,7 +51,7 @@ class BuildWrapperTest extends BaseRegressionTest {
   public void default_value() throws Exception {
     /*
     Represent the call:
-    buildWrapperDemo {
+    buildWrapper {
     }
     */
     def script = loadScript('vars/buildWrapper.groovy')
