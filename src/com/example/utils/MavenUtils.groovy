@@ -6,6 +6,8 @@ import javax.annotation.Nonnull
 
 /**
  * Created by tdongsi on 6/3/18.
+ *
+ * @author tdongsi
  */
 class MavenUtils implements Serializable {
   /**
@@ -14,14 +16,20 @@ class MavenUtils implements Serializable {
    * Example:
    * the POM file has the following strings that define SNAPSHOT dependencies
    *
+   * <pre>
+   * {@code
    * <properties>
    *         <hbase.phoenix.client.test>1.0.0-SNAPSHOT</hbase.phoenix.client.test>
    *         <hbase.phoenix.schema>1.0.0-SNAPSHOT</hbase.phoenix.schema>
    * </properties>
+   * }
+   * </pre>
    *
    * If 'hbase.phoenix.schema' is in the list 'args', then return the string
    *
+   * <pre>
    *  hbase.phoenix.schema
+   * </pre>
    *
    * @param pom: Model object representing the parsed POM file, using Pipeline step readMavenPom.
    * @param args: List of property names
