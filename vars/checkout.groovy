@@ -1,3 +1,3 @@
 def call(def scm) {
-    echo "Checkout code: ${scm.toString()}"
+  echo "Checkout code: ${scm.toString()}"
 }

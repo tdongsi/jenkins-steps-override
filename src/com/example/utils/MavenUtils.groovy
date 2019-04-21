@@ -7,7 +7,7 @@ import javax.annotation.Nonnull
 /**
  * Created by tdongsi on 6/3/18.
  */
-class MavenUtils {
+class MavenUtils implements Serializable {
   /**
    * Based on the given POM file, find parameters that define dependency versions with SNAPSHOT.
    *
